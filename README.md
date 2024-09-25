@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Logo](https://odysseusdev.app/favicon.ico)
 
-## Getting Started
+# odysseus.
 
-First, run the development server:
+![GitHub Release](https://img.shields.io/github/v/release/odysseusdev/portfolio?include_prereleases&color=%2304bb08)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/odysseusdev/portfolio)
+![GitHub contributors](https://img.shields.io/github/contributors/odysseusdev/portfolio)
+
+A web application that serves as the home/landing page for the [odysseusdev.app](https://odysseusdev.app) domain.
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
+git clone https://github.com/odysseusdev/portfolio
+```
+
+Go to the project directory
+
+```bash
+cd retrorewind-status
+```
+
+Install dependencies
+
+```bash
+yarn install
+```
+
+Start the server
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributors
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Contributors](https://contrib.rocks/image?repo=odysseusdev/portfolio)
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are currently NOT being accepted. Although this repository is public, this is currently a personal development project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Related projects
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[Retro Rewind · Players & Rooms](https://retrorewind.odysseusdev.app)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[Am I Drunk? · BAC Calculator](https://amidrunk.odysseusdev.app)
