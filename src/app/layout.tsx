@@ -1,11 +1,10 @@
 import "./globals.css";
 
-import Header from "@/components/layout/header";
-import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
-import Providers from "./providers";
+import { APPSHELL_FOOTER_HEIGHT, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
+import { AppShell, AppShellFooter, AppShellHeader, AppShellMain, ColorSchemeScript } from "@mantine/core";
 
-const nunito = Nunito({ subsets: ["latin"], display: "swap" });
+import type { Metadata } from "next";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
 	title: "odysseus.",
@@ -19,10 +18,20 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={nunito.className}>
+			<head>
+				<ColorSchemeScript />
+			</head>
+			<body>
 				<Providers>
-					<Header />
-					<main className="flex flex-col gap-4 p-6">{children}</main>
+					<AppShell
+						header={{ height: APPSHELL_HEADER_HEIGHT }}
+						footer={{ height: APPSHELL_FOOTER_HEIGHT }}
+						padding="md"
+					>
+						<AppShellHeader>Header</AppShellHeader>
+						<AppShellMain>{children}</AppShellMain>
+						<AppShellFooter>Footer</AppShellFooter>
+					</AppShell>
 				</Providers>
 			</body>
 		</html>

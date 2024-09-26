@@ -1,3 +1,8 @@
+"use client";
+
+import theme, { cssVariablesResolver } from "@/lib/theme";
+
+import { MantineProvider } from "@mantine/core";
 import React from "react";
 
 const Providers = ({
@@ -5,7 +10,15 @@ const Providers = ({
 }: Readonly<{
 	children: React.ReactNode;
 }>) => {
-	return <>{children}</>;
+	return (
+		<MantineProvider
+			theme={theme}
+			cssVariablesResolver={cssVariablesResolver}
+			defaultColorScheme="dark"
+		>
+			{children}
+		</MantineProvider>
+	);
 };
 
 export default Providers;
