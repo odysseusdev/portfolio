@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const RootPage = () => {
 	return (
-		<main>
+		<>
 			<Image
 				width={128}
 				height={128}
@@ -13,7 +13,12 @@ const RootPage = () => {
 			<p>
 				This will be the landing page for users visiting <a href="https://odysseusdev.app">odysseusdev.app</a>.
 			</p>
-		</main>
+			{Array(32)
+				.fill(0)
+				.map((_, index) => (
+					<p key={index}>Content [Line {index + 1}]</p>
+				))}
+		</>
 	);
 };
 
