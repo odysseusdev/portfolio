@@ -15,38 +15,32 @@ const RootPage = () => {
 			<Text c="dimmed">
 				This will be the landing page for users visiting <a href="https://odysseusdev.app">odysseusdev.app</a>.
 			</Text>
-			<Group>
-				<Button variant="default">Default</Button>
-				<Button variant="filled">Filled</Button>
-				<Button variant="light">Light</Button>
-				<Button variant="outline">Outline</Button>
-				<Button variant="subtle">Subtle</Button>
-				<Button variant="transparent">Transparent</Button>
-				<Button variant="white">White</Button>
-			</Group>
 			<Stack>
-				{Array(3)
+				{Array(8)
 					.fill(0)
 					.map((_, index) => (
 						<Paper
 							key={index}
-							p="md"
+							px="lg"
+							py="md"
 							withBorder
 						>
-							<Stack gap="sm">
-								<Text
-									fw={700}
-									size="lg"
-								>
-									Retro Rewind
-								</Text>
-								<Text component="h2">
-									A web application to view active rooms and players in ZPL&apos;s Mario Kart Wii mod.
-								</Text>
-								<Group justify="flex-end">
-									<Button variant="light">View</Button>
-								</Group>
-							</Stack>
+							<Text
+								component="h2"
+								fw={700}
+								size="xl"
+							>
+								Retro Rewind
+							</Text>
+							<Text
+								size="sm"
+								c="dimmed"
+							>
+								A web application to view active rooms and players in ZPL&apos;s Mario Kart Wii mod.
+							</Text>
+							<Group justify="flex-end">
+								<Button variant="filled">View</Button>
+							</Group>
 						</Paper>
 					))}
 			</Stack>

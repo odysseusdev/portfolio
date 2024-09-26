@@ -3,6 +3,8 @@ import "./globals.css";
 import { APPSHELL_FOOTER_HEIGHT, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
 import { AppShell, AppShellFooter, AppShellHeader, AppShellMain, ColorSchemeScript } from "@mantine/core";
 
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import type { Metadata } from "next";
 import Providers from "./providers";
 
@@ -25,12 +27,14 @@ export default function RootLayout({
 				<Providers>
 					<AppShell
 						header={{ height: APPSHELL_HEADER_HEIGHT }}
-						footer={{ height: APPSHELL_FOOTER_HEIGHT }}
+						styles={{ header: { backgroundColor: "transparent" } }}
 						padding="md"
 					>
-						<AppShellHeader>Header</AppShellHeader>
+						<AppShellHeader withBorder={false}>
+							<Header />
+						</AppShellHeader>
 						<AppShellMain>{children}</AppShellMain>
-						<AppShellFooter>Footer</AppShellFooter>
+						<Footer />
 					</AppShell>
 				</Providers>
 			</body>

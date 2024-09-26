@@ -14,7 +14,7 @@ const Providers = ({
 		<MantineProvider
 			theme={theme}
 			cssVariablesResolver={cssVariablesResolver}
-			defaultColorScheme="dark"
+			defaultColorScheme="light"
 		>
 			{children}
 		</MantineProvider>
