@@ -19,7 +19,7 @@ const Footer = () => {
 					size="sm"
 					c="dimmed"
 				>
-					&copy; odysseus. · 2024{year !== 2024 && ` - ${year}`} · All rights reserved.
+					&copy; odysseus. · 2024{year !== 2024 && ` - ${year}`} · All rights reserved
 				</Text>
 				<Tooltip
 					label="GitHub"

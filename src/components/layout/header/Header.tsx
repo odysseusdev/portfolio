@@ -1,8 +1,19 @@
 import { APPSHELL_CONTAINER_SIZE, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
-import { ActionIcon, Button, Container, ContainerProps, Group, Text } from "@mantine/core";
+import {
+	ActionIcon,
+	Button,
+	Container,
+	ContainerProps,
+	Group,
+	Menu,
+	MenuDropdown,
+	MenuItem,
+	MenuTarget,
+	Text,
+} from "@mantine/core";
+import { HeaderLogo, HeaderMenu, HeaderNavigationItem, HeaderScrollProvider } from ".";
+import { IconDotsVertical, IconInfoCircle, IconSettings } from "@tabler/icons-react";
 
-import { HeaderScrollManager } from ".";
-import { IconMenu2 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +22,7 @@ type HeaderProps = {} & Omit<ContainerProps, "children">;
 
 const Header = ({ ...props }: HeaderProps) => {
 	return (
-		<HeaderScrollManager>
+		<HeaderScrollProvider>
 			<Container
 				size={APPSHELL_CONTAINER_SIZE}
 				{...props}
@@ -19,35 +30,37 @@ const Header = ({ ...props }: HeaderProps) => {
 				<Group
 					h={APPSHELL_HEADER_HEIGHT}
 					justify="space-between"
-					align="center"
 				>
-					<Button
-						component={Link}
-						variant="transparent"
-						href="/"
-						size="lg"
-						px={0}
-					>
-						<Group gap="sm">
-							<Image
-								width={36}
-								height={36}
-								src="/favicon.ico"
-								alt="Logo"
-							/>
-
-							<Text fw={700}>odysseus.</Text>
-						</Group>
-					</Button>
-					<ActionIcon
-						variant="transparent"
-						size="lg"
-					>
-						<IconMenu2 />
-					</ActionIcon>
+					<HeaderLogo />
+					<Group visibleFrom="sm">
+						<HeaderNavigationItem
+							href="/"
+							exact
+						>
+							Home
+						</HeaderNavigationItem>
+						<HeaderNavigationItem href="/projects">Projects</HeaderNavigationItem>
+						<HeaderNavigationItem href="/blog">Blog</HeaderNavigationItem>
+					</Group>
+					<Menu position="bottom-end">
+						<MenuTarget>
+							<ActionIcon
+								variant="subtle"
+								size="lg"
+								visibleFrom="sm"
+							>
+								<IconDotsVertical size={20} />
+							</ActionIcon>
+						</MenuTarget>
+						<MenuDropdown>
+							<MenuItem leftSection={<IconSettings size={18} />}>Settings</MenuItem>
+							<MenuItem leftSection={<IconInfoCircle size={18} />}>About</MenuItem>
+						</MenuDropdown>
+					</Menu>
+					<HeaderMenu hiddenFrom="sm" />
 				</Group>
 			</Container>
-		</HeaderScrollManager>
+		</HeaderScrollProvider>
 	);
 };
 

@@ -1,6 +1,9 @@
 import Header from "./Header";
-import HeaderScrollManager from "./HeaderScrollManager";
+import HeaderLogo from "./HeaderLogo";
+import HeaderMenu from "./HeaderMenu";
+import HeaderNavigationItem from "./HeaderNavigationItem";
+import HeaderScrollProvider from "./HeaderScrollProvider";
 
-export { HeaderScrollManager };
+export { HeaderScrollProvider, HeaderLogo, HeaderNavigationItem, HeaderMenu };
 
 export default Header;

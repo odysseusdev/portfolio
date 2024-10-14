@@ -1,50 +1,30 @@
-import { Button, Group, Paper, Stack, Text, Title } from "@mantine/core";
+import { Stack, Title } from "@mantine/core";
 
-import Image from "next/image";
+import BlogPosts from "@/components/blog-posts/blog-posts";
+import Hero from "@/components/layout/hero";
+import Projects from "@/components/projects/projects";
+import { getAllBlogPosts } from "@/lib/api/blog-posts";
+import { getAllProjects } from "@/lib/api/projects";
 
 const RootPage = () => {
+	const projects = getAllProjects();
+	const blogPosts = getAllBlogPosts();
+
 	return (
-		<Stack>
-			<Image
-				width={128}
-				height={128}
-				src="/favicon.ico"
-				alt="Profile picture"
+		<>
+			<Hero
+				title="odysseus."
+				description="Full-stack web developer with a focus on clean and intuitive user experiences"
 			/>
-			<Title>odysseus.</Title>
-			<Text c="dimmed">
-				This will be the landing page for users visiting <a href="https://odysseusdev.app">odysseusdev.app</a>.
-			</Text>
 			<Stack>
-				{Array(8)
-					.fill(0)
-					.map((_, index) => (
-						<Paper
-							key={index}
-							px="lg"
-							py="md"
-							withBorder
-						>
-							<Text
-								component="h2"
-								fw={700}
-								size="xl"
-							>
-								Retro Rewind
-							</Text>
-							<Text
-								size="sm"
-								c="dimmed"
-							>
-								A web application to view active rooms and players in ZPL&apos;s Mario Kart Wii mod.
-							</Text>
-							<Group justify="flex-end">
-								<Button variant="filled">View</Button>
-							</Group>
-						</Paper>
-					))}
+				<Title variant="h2">Projects</Title>
+				<Projects projects={projects.filter(project => project.favourite)} />
 			</Stack>
-		</Stack>
+			<Stack>
+				<Title variant="h2">Blog posts</Title>
+				<BlogPosts blogPosts={blogPosts.slice(0, 3)} />
+			</Stack>
+		</>
 	);
 };
 

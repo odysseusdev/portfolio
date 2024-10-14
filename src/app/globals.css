@@ -1,8 +1,11 @@
 @import "@mantine/core/styles.css";
 
+:root * {
+	text-transform: lowercase;
+}
+
 .blur {
 	backdrop-filter: blur(16px) saturate(180%);
 	-webkit-backdrop-filter: blur(16px) saturate(180%);
-	background-color: rgba(255, 255, 255, 0.7);
-	outline: calc(0.0625rem * var(--mantine-scale)) solid var(--mantine-color-gray-3);
+	background-color: rgba(255, 255, 255, 0.8) !important;
 }

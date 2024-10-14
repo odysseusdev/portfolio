@@ -14,6 +14,7 @@ const cssVariablesResolver: CSSVariablesResolver = (theme: MantineTheme) => ({
 	variables: {},
 	light: {
 		"--mantine-color-dark-filled": theme.colors.dark[8],
+		// "--mantine-color-body": theme.colors.gray[0],
 	},
 	dark: {},
 });
