@@ -3,7 +3,6 @@ type BlogPost = {
 	title: string;
 	excerpt: string;
 	date: Date;
-	favourite: boolean;
 	content: string;
 	preview?: boolean;
 };
