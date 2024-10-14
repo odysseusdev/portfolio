@@ -38,32 +38,29 @@ const ProjectPage = async ({ params }: ProjectPageParams) => {
 				size="xs"
 				p={0}
 			>
-				<Stack gap="xl">
-					<Group grow>
-						<Button
-							component="a"
-							href={project.url}
-							target="_blank"
-							rightSection={<IconExternalLink size={16} />}
-						>
-							Visit
-						</Button>
-						<Button
-							component="a"
-							href={Urls.github(project.repository)}
-							target="_blank"
-							variant="default"
-							leftSection={<IconBrandGithub size={16} />}
-						>
-							Github
-						</Button>
-					</Group>
-					<Group justify="center">
-						<ReleaseBadge repository={project.repository} />
-					</Group>
-				</Stack>
+				<Group grow>
+					<Button
+						component="a"
+						href={project.url}
+						target="_blank"
+						rightSection={<IconExternalLink size={16} />}
+					>
+						Visit
+					</Button>
+					<Button
+						component="a"
+						href={Urls.github(project.repository)}
+						target="_blank"
+						variant="default"
+						leftSection={<IconBrandGithub size={16} />}
+					>
+						Github
+					</Button>
+				</Group>
 			</Container>
-
+			<Group justify="center">
+				<ReleaseBadge repository={project.repository} />
+			</Group>
 			<Box dangerouslySetInnerHTML={{ __html: content }} />
 		</>
 	);

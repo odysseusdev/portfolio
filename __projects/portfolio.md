@@ -12,7 +12,7 @@ A web application that serves as the home/landing page for the ![odysseusdev.app
 
 ## Features
 
--   View web app projects developed by odysseus.
+-   View web application projects developed by odysseus.
 -   Read blog posts about discoveries, releases and how-to guides on common development issues
 -   Responsive design
 

@@ -1,7 +1,18 @@
 import { APPSHELL_CONTAINER_SIZE, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
-import { ActionIcon, Container, ContainerProps, Group, Menu, MenuDropdown, MenuItem, MenuTarget } from "@mantine/core";
-import { HeaderLogo, HeaderMenu, HeaderNavigationItem, HeaderScrollProvider } from ".";
-import { IconDotsVertical, IconInfoCircle, IconSettings } from "@tabler/icons-react";
+import {
+	ActionIcon,
+	Box,
+	Container,
+	ContainerProps,
+	Group,
+	Menu,
+	MenuDropdown,
+	MenuItem,
+	MenuTarget,
+	Text,
+} from "@mantine/core";
+import { HeaderLogo, HeaderMenu, HeaderMenuItem, HeaderNavigationItem, HeaderScrollProvider } from ".";
+import { IconDotsVertical, IconInfoCircle } from "@tabler/icons-react";
 
 import React from "react";
 
@@ -40,8 +51,12 @@ const Header = ({ ...props }: HeaderProps) => {
 							</ActionIcon>
 						</MenuTarget>
 						<MenuDropdown>
-							<MenuItem leftSection={<IconSettings size={18} />}>Settings</MenuItem>
-							<MenuItem leftSection={<IconInfoCircle size={18} />}>About</MenuItem>
+							<HeaderMenuItem
+								icon={IconInfoCircle}
+								title="Information"
+								description="Development and application"
+								href="/information"
+							/>
 						</MenuDropdown>
 					</Menu>
 					<HeaderMenu hiddenFrom="sm" />

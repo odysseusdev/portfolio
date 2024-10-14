@@ -17,7 +17,7 @@ const ProjectsPage = () => {
 			<Breadcrumbs items={[{ title: "Home", href: "/" }, { title: "Projects" }]} />
 			<Hero
 				title="Projects"
-				description="All external facing repositories developed and supported by odysseus."
+				description="All external-facing repositories developed and supported by odysseus."
 			/>
 			<Projects projects={projects} />
 		</>

@@ -13,6 +13,7 @@ import {
 } from "@mantine/core";
 import { IconCode, IconHome, IconInfoCircle, IconNotebook, IconSettings } from "@tabler/icons-react";
 
+import { HeaderMenuItem } from ".";
 import Link from "next/link";
 import React from "react";
 import { useDisclosure } from "@mantine/hooks";
@@ -43,30 +44,31 @@ const HeaderMenu = ({ ...props }: HeaderMenuProps) => {
 			</MenuTarget>
 			<MenuDropdown>
 				<MenuLabel>Pages</MenuLabel>
-				<MenuItem
-					component={Link}
+				<HeaderMenuItem
+					icon={IconHome}
+					title="Home"
+					description="landing page"
 					href="/"
-					leftSection={<IconHome size={18} />}
-				>
-					Home
-				</MenuItem>
-				<MenuItem
-					component={Link}
+				/>
+				<HeaderMenuItem
+					icon={IconCode}
+					title="Projects"
+					description="External-facing web applications"
 					href="/projects"
-					leftSection={<IconCode size={18} />}
-				>
-					Projects
-				</MenuItem>
-				<MenuItem
-					component={Link}
+				/>
+				<HeaderMenuItem
+					icon={IconNotebook}
+					title="Blog"
+					description="Discoveries, releases and how-to guides"
 					href="/blog"
-					leftSection={<IconNotebook size={18} />}
-				>
-					Blog
-				</MenuItem>
+				/>
 				<MenuLabel>Application</MenuLabel>
-				<MenuItem leftSection={<IconSettings size={18} />}>Settings</MenuItem>
-				<MenuItem leftSection={<IconInfoCircle size={18} />}>About</MenuItem>
+				<HeaderMenuItem
+					icon={IconInfoCircle}
+					title="Information"
+					description="Development and application"
+					href="/information"
+				/>
 			</MenuDropdown>
 		</Menu>
 	);
