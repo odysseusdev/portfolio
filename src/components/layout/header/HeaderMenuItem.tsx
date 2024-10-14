@@ -1,5 +1,5 @@
 import { Box, MenuItem, MenuItemProps, PolymorphicComponentProps, Text } from "@mantine/core";
-import { Icon, IconInfoCircle, IconProps } from "@tabler/icons-react";
+import { Icon, IconProps } from "@tabler/icons-react";
 
 import Link from "next/link";
 import React from "react";

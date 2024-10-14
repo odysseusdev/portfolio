@@ -1,4 +1,4 @@
-import { Box, Button, Container, Group, Stack } from "@mantine/core";
+import { Box, Button, Container, Group } from "@mantine/core";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import { getAllProjects, getProjectBySlug } from "@/lib/api/projects";
 

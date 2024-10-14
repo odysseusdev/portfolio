@@ -6,15 +6,13 @@ import {
 	Burger,
 	Menu,
 	MenuDropdown,
-	MenuItem,
 	MenuLabel,
 	MenuTarget,
 	PolymorphicComponentProps,
 } from "@mantine/core";
-import { IconCode, IconHome, IconInfoCircle, IconNotebook, IconSettings } from "@tabler/icons-react";
+import { IconCode, IconHome, IconInfoCircle, IconNotebook } from "@tabler/icons-react";
 
 import { HeaderMenuItem } from ".";
-import Link from "next/link";
 import React from "react";
 import { useDisclosure } from "@mantine/hooks";
 
