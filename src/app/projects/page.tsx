@@ -19,7 +19,10 @@ const ProjectsPage = () => {
 				title="Projects"
 				description="All external-facing repositories developed and supported by odysseus."
 			/>
-			<Projects projects={projects} />
+			<Projects
+				projects={projects}
+				hideViewMore
+			/>
 		</>
 	);
 };

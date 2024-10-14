@@ -19,7 +19,10 @@ const BlogPage = () => {
 				title="Blog"
 				description="Discoveries, releases and how-to guides on common development issues"
 			/>
-			<BlogPosts blogPosts={blogPosts} />
+			<BlogPosts
+				blogPosts={blogPosts}
+				hideViewMore
+			/>
 		</>
 	);
 };

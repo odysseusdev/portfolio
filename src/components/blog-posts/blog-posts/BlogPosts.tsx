@@ -5,9 +5,9 @@ import BlogPostCard from "../blog-post-card";
 import Link from "next/link";
 import React from "react";
 
-export type BlogPostsProps = { blogPosts: BlogPost[] };
+export type BlogPostsProps = { blogPosts: BlogPost[]; hideViewMore?: boolean };
 
-const BlogPosts = ({ blogPosts }: BlogPostsProps) => {
+const BlogPosts = ({ blogPosts, hideViewMore = false }: BlogPostsProps) => {
 	if (!blogPosts || blogPosts.length === 0) {
 		return <Text>No blog posts found.</Text>;
 	}
@@ -25,20 +25,22 @@ const BlogPosts = ({ blogPosts }: BlogPostsProps) => {
 					/>
 				</GridCol>
 			))}
-			<GridCol span={{ base: 12, sm: 6, lg: 4 }}>
-				<Center
-					h="100%"
-					py="lg"
-				>
-					<Button
-						component={Link}
-						href="/projects"
-						variant="light"
+			{!hideViewMore && (
+				<GridCol span={{ base: 12, sm: 6, lg: 4 }}>
+					<Center
+						h="100%"
+						py="lg"
 					>
-						View more projects..
-					</Button>
-				</Center>
-			</GridCol>
+						<Button
+							component={Link}
+							href="/blog"
+							variant="light"
+						>
+							View more blog posts..
+						</Button>
+					</Center>
+				</GridCol>
+			)}
 		</Grid>
 	);
 };
