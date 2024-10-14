@@ -1,5 +1,3 @@
-import { Urls } from ".";
-
 type Project = {
 	slug: string;
 	name: string;

@@ -1,5 +1,4 @@
-import { BlogPost, Project } from "../types";
-
+import { BlogPost } from "../types";
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";

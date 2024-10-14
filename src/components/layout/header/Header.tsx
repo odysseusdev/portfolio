@@ -1,21 +1,8 @@
 import { APPSHELL_CONTAINER_SIZE, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
-import {
-	ActionIcon,
-	Button,
-	Container,
-	ContainerProps,
-	Group,
-	Menu,
-	MenuDropdown,
-	MenuItem,
-	MenuTarget,
-	Text,
-} from "@mantine/core";
+import { ActionIcon, Container, ContainerProps, Group, Menu, MenuDropdown, MenuItem, MenuTarget } from "@mantine/core";
 import { HeaderLogo, HeaderMenu, HeaderNavigationItem, HeaderScrollProvider } from ".";
 import { IconDotsVertical, IconInfoCircle, IconSettings } from "@tabler/icons-react";
 
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 type HeaderProps = {} & Omit<ContainerProps, "children">;

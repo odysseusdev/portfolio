@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import { APPSHELL_CONTAINER_SIZE, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
-import { AppShell, AppShellHeader, AppShellMain, ColorSchemeScript, Container, Group, Stack } from "@mantine/core";
+import { AppShell, AppShellHeader, AppShellMain, ColorSchemeScript, Container, Stack } from "@mantine/core";
 
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";

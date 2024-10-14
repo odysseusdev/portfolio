@@ -1,9 +1,9 @@
 "use client";
 
 import { Box, BoxComponentProps, PolymorphicComponentProps } from "@mantine/core";
-import { useHeadroom, useWindowScroll } from "@mantine/hooks";
 
 import React from "react";
+import { useWindowScroll } from "@mantine/hooks";
 
 type HeaderScrollProviderProps = {} & PolymorphicComponentProps<"div", BoxComponentProps>;
 

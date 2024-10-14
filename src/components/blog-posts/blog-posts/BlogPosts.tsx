@@ -1,6 +1,6 @@
-import { BlogPost, Project } from "@/lib/types";
-import { Button, Center, Grid, GridCol, Stack, StackProps, Text, Title } from "@mantine/core";
+import { Button, Center, Grid, GridCol, Text } from "@mantine/core";
 
+import { BlogPost } from "@/lib/types";
 import BlogPostCard from "../blog-post-card";
 import Link from "next/link";
 import React from "react";

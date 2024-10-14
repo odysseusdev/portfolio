@@ -1,4 +1,4 @@
-import { Button, Center, Grid, GridCol, Stack, StackProps, Text, Title } from "@mantine/core";
+import { Button, Center, Grid, GridCol, Text } from "@mantine/core";
 
 import Link from "next/link";
 import { Project } from "@/lib/types";

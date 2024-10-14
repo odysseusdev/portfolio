@@ -1,8 +1,7 @@
-import { Box, Button, Center, Container, Group, Image, Paper, Stack } from "@mantine/core";
+import { Box, Button, Container, Group, Stack } from "@mantine/core";
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import { getAllProjects, getProjectBySlug } from "@/lib/api/projects";
 
-import { APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
 import Breadcrumbs from "@/components/layout/breadcrumbs";
 import Hero from "@/components/layout/hero";
 import { Metadata } from "next";
