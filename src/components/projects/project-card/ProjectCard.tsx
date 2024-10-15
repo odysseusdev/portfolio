@@ -1,4 +1,4 @@
-import { Button, Group, Paper, PaperProps, PolymorphicComponentProps, Stack, Text } from "@mantine/core";
+import { Anchor, Button, Group, Paper, PaperProps, PolymorphicComponentProps, Stack, Text } from "@mantine/core";
 
 import { IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
@@ -40,8 +40,8 @@ const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
 					mt="sm"
 				>
 					<Button
-						component={Link}
-						href={`/projects/${project.slug}`}
+						component="a"
+						href={project.url}
 						variant="default"
 						rightSection={<IconExternalLink size={16} />}
 					>
