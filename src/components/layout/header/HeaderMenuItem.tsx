@@ -21,6 +21,7 @@ const HeaderMenuItem = ({ icon: HeaderMenuItemIcon, title, description, ...props
 					size={18}
 				/>
 			}
+			pr="md"
 			{...props}
 		>
 			<Box>
