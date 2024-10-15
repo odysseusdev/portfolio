@@ -1,4 +1,4 @@
-![Logo](https://odysseusdev.app/profile-logo-256.png)
+![Logo](https://odysseusdev.app/assets/profile-circle-256.png)
 
 # odysseus.
 
