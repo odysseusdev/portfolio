@@ -11,6 +11,7 @@ const Projects = ({ projects, hideViewMore = false }: ProjectsProps) => {
 	if (!projects || projects.length === 0) {
 		return <Text>No projects found.</Text>;
 	}
+
 	return (
 		<Grid>
 			{projects.map(project => (

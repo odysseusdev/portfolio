@@ -1,4 +1,4 @@
-import { Button, ButtonProps, Group, PolymorphicComponentProps, Text } from "@mantine/core";
+import { Button, ButtonProps, Group, PolymorphicComponentProps, Stack, Text } from "@mantine/core";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -22,8 +22,24 @@ const HeaderLogo = () => {
 					src="/favicon.ico"
 					alt="Logo"
 				/>
-
-				<Text fw={700}>odysseus.</Text>
+				<Stack
+					align="flex-start"
+					gap={2}
+				>
+					<Text
+						fw={700}
+						lh={1.2}
+					>
+						odysseus.
+					</Text>
+					<Text
+						size="xs"
+						c="dimmed"
+						lh={1}
+					>
+						Developer
+					</Text>
+				</Stack>
 			</Group>
 		</Button>
 	);

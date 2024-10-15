@@ -8,13 +8,13 @@ favourite: true
 
 ## Overview
 
-A web application that serves as the home/landing page for the [odysseusdev.app](https://odysseusdev.app) domain.
+A web application that serves as the home/landing page for the **[odysseusdev.app](https://odysseusdev.app)** domain.
 
 ## Background
 
 I mean there's not much to say here..
 
-I bought a custom domain to host all my personal web application projects, and needed a landing page for the root [odysseusdev.app](https://odysseusdev.app) domain.
+I bought a custom domain to host all my personal web application projects, and needed a landing page for the root **[odysseusdev.app](https://odysseusdev.app)** domain.
 
 Pretty fun stuff..
 
