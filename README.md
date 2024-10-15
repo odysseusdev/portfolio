@@ -1,4 +1,4 @@
-![Logo](https://odysseusdev.app/favicon.ico)
+![Logo](https://odysseusdev.app/assets/profile-logo-256.png)
 
 # odysseus.
 
@@ -19,7 +19,7 @@ git clone https://github.com/odysseusdev/portfolio
 Go to the project directory
 
 ```bash
-cd retrorewind-status
+cd portfolio
 ```
 
 Install dependencies
@@ -47,5 +47,3 @@ Contributions are currently NOT being accepted. Although this repository is publ
 ## Related projects
 
 [Retro Rewind · Players & Rooms](https://retrorewind.odysseusdev.app)
-
-[Am I Drunk? · BAC Calculator](https://amidrunk.odysseusdev.app)

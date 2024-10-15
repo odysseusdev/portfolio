@@ -1,9 +1,12 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { APPSHELL_CONTAINER_SIZE, APPSHELL_FOOTER_HEIGHT, APPSHELL_HEADER_HEIGHT } from "@/lib/constants";
+import { AppShell, AppShellFooter, AppShellHeader, AppShellMain, ColorSchemeScript, Container, Stack } from "@mantine/core";
 
-const nunito = Nunito({ subsets: ["latin"], display: "swap" });
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+import type { Metadata } from "next";
+import Providers from "../components/providers";
 
 export const metadata: Metadata = {
 	title: "odysseus.",
@@ -17,7 +20,34 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={nunito.className}>{children}</body>
+			<head>
+				<ColorSchemeScript />
+			</head>
+			<body>
+				<Providers>
+					<AppShell
+						header={{ height: APPSHELL_HEADER_HEIGHT }}
+						footer={{ height: APPSHELL_FOOTER_HEIGHT }}
+						styles={{ header: { backgroundColor: "transparent" } }}
+						padding={{ base: "xs", xs: "md", sm: "sm", md: "lg" }}
+					>
+						<AppShellHeader>
+							<Header />
+						</AppShellHeader>
+						<AppShellMain>
+							<Container
+								size={APPSHELL_CONTAINER_SIZE}
+								py={{ base: "md", xl: "lg" }}
+							>
+								<Stack gap="xl">{children}</Stack>
+							</Container>
+						</AppShellMain>
+						<AppShellFooter>
+							<Footer />
+						</AppShellFooter>
+					</AppShell>
+				</Providers>
+			</body>
 		</html>
 	);
 }
