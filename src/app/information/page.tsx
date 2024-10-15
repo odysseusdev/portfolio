@@ -1,4 +1,4 @@
-import { Grid, GridCol, Title } from "@mantine/core";
+import { Grid, GridCol, Stack, Title } from "@mantine/core";
 import InfoCard, { ReleaseInfoCard } from "@/components/info-card";
 
 import Breadcrumbs from "@/components/layout/breadcrumbs";
@@ -18,26 +18,28 @@ const InformationPage = () => {
 				title="Information"
 				description="Development and release details related to this web application"
 			/>
-			<Title>Application</Title>
-			<Grid>
-				<GridCol span={{ base: 12, xs: 6, md: 4 }}>
-					<InfoCard
-						h="100%"
-						title="Developed by"
-						description="odysseus."
-					/>
-				</GridCol>
-				<GridCol span={{ base: 12, xs: 6, md: 4 }}>
-					<ReleaseInfoCard h="100%" />
-				</GridCol>
-				<GridCol span={{ base: 12, xs: 6, md: 4 }}>
-					<InfoCard
-						h="100%"
-						title="Built using"
-						description="Next.js + Mantine"
-					/>
-				</GridCol>
-			</Grid>
+			<Stack>
+				<Title>Application</Title>
+				<Grid>
+					<GridCol span={{ base: 12, xs: 6, md: 4 }}>
+						<InfoCard
+							h="100%"
+							title="Developed by"
+							description="odysseus."
+						/>
+					</GridCol>
+					<GridCol span={{ base: 12, xs: 6, md: 4 }}>
+						<ReleaseInfoCard h="100%" />
+					</GridCol>
+					<GridCol span={{ base: 12, xs: 6, md: 4 }}>
+						<InfoCard
+							h="100%"
+							title="Built using"
+							description="Next.js + Mantine"
+						/>
+					</GridCol>
+				</Grid>
+			</Stack>
 		</>
 	);
 };
