@@ -40,8 +40,8 @@ const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
 					mt="sm"
 				>
 					<Button
-						component={Link}
-						href={`/projects/${project.slug}`}
+						component="a"
+						href={project.url}
 						variant="default"
 						rightSection={<IconExternalLink size={16} />}
 					>

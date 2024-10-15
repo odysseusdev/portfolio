@@ -1,7 +1,7 @@
 ---
 title: "Example"
-excerpt: "An example blog post to showcase what a post may look like and will replaced in the future"
-date: "2024-10-14T23:21:00"
+excerpt: "An example blog post to showcase what a post may look like and will be replaced in the future"
+date: "2024-10-15T22:41:00"
 ---
 
 ## Overview
