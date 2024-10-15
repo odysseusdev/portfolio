@@ -1,4 +1,4 @@
-import { Anchor, Button, Group, Paper, PaperProps, PolymorphicComponentProps, Stack, Text } from "@mantine/core";
+import { Button, Group, Paper, PaperProps, PolymorphicComponentProps, Stack, Text } from "@mantine/core";
 
 import { IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
