@@ -42,6 +42,7 @@ const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
 					<Button
 						component="a"
 						href={project.url}
+						target="_blank"
 						variant="default"
 						rightSection={<IconExternalLink size={16} />}
 					>
