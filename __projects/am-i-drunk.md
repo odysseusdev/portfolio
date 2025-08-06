@@ -8,7 +8,7 @@ favourite: false
 
 ## Overview
 
-A web application to assist you in estimating your current Blood Alcohol Concentration (BAC), as well and provide an indication of how long it will take before you can drive.
+A web application to assist you in estimating your current Blood Alcohol Concentration (BAC), as well as provide an indication of how long it will take before you can drive.
 
 ## Background
 
@@ -24,16 +24,16 @@ Discussing the topic over a beer at the pub, we came across several **blood alco
 
 I quickly identified two key problems that most of them had in common.
 
-1. They had awful user experience and responsive design
+1. They had subpar user experiences and responsive design
 2. They were often not transparent about the calculations they were using
 
 I decided to create one of my own, hoping to resolve the above two concerns, but also to learn more about the science behind the actual calculations used for estimation.
 
 ## Development
 
-This was my second delve into using the [**Mantine**](https://v6.mantine.dev) UI library, so the foundational layout and componentry (if that's a word?) came pretty quickly.
+This was my second delve into using the [**mantine**](https://v6.mantine.dev) UI library, so the foundational layout and componentry (if that's a word?) came pretty quickly.
 
-I did some very high-level research into BAC calculation and the usage of the **Windmark formula**, which I quickly came to realise only scratches the surface of an accurate calculation, so my initial focus was user experience.
+I did some very high-level research into BAC calculations and the usage of the **Windmark formula**, which I quickly came to realise only scratches the surface of an accurate calculation, so my initial focus was user experience.
 
 Alcoholic drinks can come in various different formats, involving various different metrics of defining the alcohol content. For example, beer and premix drinks commonly use **standard drinks**, whereas spirits use the **alcohol by volume (ABV)**. Cocktails can then use any combination of these depending on the ingredients. With this in mind, having a streamlined way of providing drink data would be vital to improving the user experience of this application. The current implementation using the concept of **"parts"**, which allows multiple volumes of liquid (if applicable) of a specified metric to be added together to derive a drink.
 
