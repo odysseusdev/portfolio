@@ -3,7 +3,7 @@ name: "Portfolio"
 description: "A portfolio/home page for odysseusdev.app, showcasing external facing projects"
 url: "https://odysseusdev.app"
 repository: "portfolio"
-favourite: true
+favourite: false
 ---
 
 ## Overview
